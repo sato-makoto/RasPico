@@ -1,6 +1,9 @@
 import utime
 import machine
 
+# send message to serial port
+# and blink LED
+
 uart = machine.UART(0, 115200, bits=8, parity=None, stop=1)
 uart.write('Hello, Serial World!\r\n'.encode())
 fb = 'fizzbuzz\r\n'.encode()
